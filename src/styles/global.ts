@@ -8,7 +8,8 @@ export default createGlobalStyle`
   }
   
   body {
-    font-size: 16px;
+    font-size: 14px;
     font-family: 'Inter', sans-serif;
-  }
+    
+  } 
 `

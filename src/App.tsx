@@ -1,45 +1,61 @@
 import { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
+import { ThemeProvider, DefaultTheme } from 'styled-components';
 
-function App() {
-  const [count, setCount] = useState(0)
+import GlobalStyleComponent from './styles/global'
+import light from './styles/themes/light';
+import dark from './styles/themes/dark';
+
+
+import { App } from './style'
+import Header from './Components/Header'
+import Card from './Components/Cards';
+import GridCards from './Components/GridCards'
+import Main from './Components/Main'
+import OverViewCard from './Components/OverviewCard';
+
+
+function CApp() {
+  const [theme, setTheme] = useState(dark);
+  const toggleTheme = () => {
+    setTheme(theme?.title === 'dark' ? light : dark)
+  }
+
+
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.tsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <App>
+        <GlobalStyleComponent />
+        <Header toggleTheme={toggleTheme} />
+        <Main>
+          <>
+          <GridCards>
+            <>
+              <Card />
+              <Card />
+              <Card />
+              <Card />
+            </>  
+          </GridCards>
+          <h2>Overview - Today</h2>
+          <GridCards>
+            <>
+              <OverViewCard />
+              <OverViewCard />
+              <OverViewCard />
+              <OverViewCard />
+              <OverViewCard />
+              <OverViewCard />
+              <OverViewCard />
+              <OverViewCard />
+            </>  
+          </GridCards>
+          </>
+        </Main>
+      </App>
+    </ThemeProvider>
+    
   )
 }
 
-export default App
+export default CApp
