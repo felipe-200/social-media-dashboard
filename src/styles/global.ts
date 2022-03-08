@@ -12,6 +12,5 @@ export default createGlobalStyle`
     height: 100vh;
     font-size: 14px;
     font-family: 'Inter', sans-serif;
-    
   } 
 `

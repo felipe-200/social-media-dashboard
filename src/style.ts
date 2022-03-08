@@ -6,11 +6,15 @@ export const App = styled.div`
   flex-direction: column;
   background-color:  ${props => props.theme.colors.bgPrimary};
   height: 100vh;
+  overflow: hidden;
 
   @media only screen and (max-width: 840px) {
-    height: calc(100vh + 360px);
+    height: calc(100vh + 550px );
+  }
+  @media only screen and (max-width: 414px) {
+    height: calc(100vh + 250px);
   }
   @media only screen and (max-width: 375px) {
-    height: calc(270vh);
+    height: calc(100vh + 550px * 2.7);
   }
 `

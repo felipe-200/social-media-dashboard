@@ -7,7 +7,7 @@ export const GridCards = styled.section`
   grid-template-columns: repeat(4, 1fr);
   column-gap: 30px;
   row-gap: 30px;
-  margin-bottom: 40px;  
+  /* margin-bottom: 30px;   */
 
   @media only screen and (max-width: 804px) {
     grid-template-columns: repeat(2, 1fr);

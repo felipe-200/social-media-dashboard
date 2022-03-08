@@ -5,11 +5,11 @@ export const Main = styled.main`
   width: 100%;
   /* background-color:  ${props => props.theme.colors.bgPrimary}; */
   position: absolute;
-  top: 110px;
+  top: 100px;
 
   h2 {
     color: ${props => props.theme.colors.textSecondary};
-    margin-bottom: 20px;
+    margin: 25px 0 15px 0;
   }
 
   @media only screen and (max-width: 1060px) {
