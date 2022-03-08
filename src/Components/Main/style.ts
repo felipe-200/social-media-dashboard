@@ -1,12 +1,11 @@
 import styled from "styled-components";
 
 export const Main = styled.main`
-  /* height: 100vh; */
+  padding: 0 150px;  
+  width: 100%;
+  /* background-color:  ${props => props.theme.colors.bgPrimary}; */
   position: absolute;
   top: 110px;
-  padding: 0 150px;
-  width:100% ;
-
 
   h2 {
     color: ${props => props.theme.colors.textSecondary};
@@ -14,11 +13,15 @@ export const Main = styled.main`
   }
 
   @media only screen and (max-width: 1060px) {
-    padding: 60px;
-    top: 70px;
+    padding: 0 60px;
   }
+  @media only screen and (max-width: 804px) {
+    top: 150px;
+    padding: 0 40px;
+  }
+
   @media only screen and (max-width: 375px) {
-    padding: 20px;
-    top: 140px;
+    top: 150px;
+    padding: 0 20px;
   }
 `

@@ -6,8 +6,6 @@ export const Header = styled.header`
   height: 180px;
   padding: 30px 150px 0 150px;
 
-  
-
   @media only screen and (max-width: 1060px) {
     padding: 60px;
   }
@@ -25,9 +23,6 @@ export const ContentHeader = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  
-
 
   section {
     width:100% ;

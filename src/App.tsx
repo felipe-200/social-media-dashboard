@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { ThemeProvider, DefaultTheme } from 'styled-components';
+import styled, { ThemeProvider, DefaultTheme } from 'styled-components';
 
 import GlobalStyleComponent from './styles/global'
 import light from './styles/themes/light';
@@ -21,36 +21,36 @@ function CApp() {
   }
 
 
-
   return (
     <ThemeProvider theme={theme}>
       <App>
-        <GlobalStyleComponent />
+      <GlobalStyleComponent />
         <Header toggleTheme={toggleTheme} />
         <Main>
-          <>
-          <GridCards>
-            <>
-              <Card />
-              <Card />
-              <Card />
-              <Card />
-            </>  
-          </GridCards>
-          <h2>Overview - Today</h2>
-          <GridCards>
-            <>
-              <OverViewCard />
-              <OverViewCard />
-              <OverViewCard />
-              <OverViewCard />
-              <OverViewCard />
-              <OverViewCard />
-              <OverViewCard />
-              <OverViewCard />
-            </>  
-          </GridCards>
-          </>
+          <div>
+            <GridCards>
+              <>
+                <Card />
+                <Card />
+                <Card />
+                <Card />
+              </>
+            </GridCards>
+            <h2>Overview - Today</h2>
+            
+            <GridCards>
+              <>
+                <OverViewCard />
+                <OverViewCard />
+                <OverViewCard />
+                <OverViewCard />
+                <OverViewCard />
+                <OverViewCard />
+                <OverViewCard />
+                <OverViewCard />
+              </>  
+            </GridCards>
+          </div>
         </Main>
       </App>
     </ThemeProvider>

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
-export const GridCards = styled.main`
-  width:100% ;
+export const GridCards = styled.section`
+  width: 100%;
   display: grid;
   justify-content:left;
   grid-template-columns: repeat(4, 1fr);
